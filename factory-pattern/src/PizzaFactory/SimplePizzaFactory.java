@@ -1,3 +1,10 @@
+package PizzaFactory;
+
+import Pizza.CheesePizza;
+import Pizza.GreekPizza;
+import Pizza.PepperoniPizza;
+import Pizza.Pizza;
+
 public class SimplePizzaFactory {
     public Pizza createPizza(String type) {
         Pizza pizza;

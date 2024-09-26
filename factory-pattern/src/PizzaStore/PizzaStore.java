@@ -1,3 +1,8 @@
+package PizzaStore;
+
+import Pizza.Pizza;
+import PizzaFactory.SimplePizzaFactory;
+
 public class PizzaStore {
     SimplePizzaFactory pizzaFactory;
 
@@ -5,7 +10,7 @@ public class PizzaStore {
         this.pizzaFactory = pizzaFactory;
     }
 
-    Pizza orderPizza(String type) {
+    public Pizza orderPizza(String type) {
         Pizza pizza = pizzaFactory.createPizza(type);
 
         pizza.prepare();

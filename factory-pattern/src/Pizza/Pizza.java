@@ -1,3 +1,5 @@
+package Pizza;
+
 public class Pizza {
     public void prepare() {
     }
