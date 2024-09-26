@@ -1,14 +1,12 @@
 public class PizzaStore {
-    Pizza orderPizza(String type) {
-        Pizza pizza;
+    SimplePizzaFactory pizzaFactory;
 
-        if (type.equals("cheese")) {
-            pizza = new CheesePizza();
-        } else if (type.equals("greek")) {
-            pizza = new GreekPizza();
-        } else {
-            pizza = new PepperoniPizza();
-        }
+    public PizzaStore(SimplePizzaFactory pizzaFactory) {
+        this.pizzaFactory = pizzaFactory;
+    }
+
+    Pizza orderPizza(String type) {
+        Pizza pizza = pizzaFactory.createPizza(type);
 
         pizza.prepare();
         pizza.bake();
