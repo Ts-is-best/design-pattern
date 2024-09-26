@@ -16,5 +16,8 @@ public class GreekPizza extends Pizza {
         dough = ingredientFactory.createDough();
         sauce = ingredientFactory.createSauce();
         cheese = ingredientFactory.createCheese();
+        clam = ingredientFactory.createClam();
+        veggies = ingredientFactory.createVeggies();
+        pepperoni = ingredientFactory.createPepperoni();
     }
 }

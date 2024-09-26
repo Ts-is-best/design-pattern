@@ -2,14 +2,12 @@ package Pizza;
 
 import Ingredient.*;
 
-import java.util.List;
-
 public abstract class Pizza {
     protected String name;
 
     protected Dough dough;
     protected Sauce sauce;
-    protected List<Veggies> veggies;
+    protected Veggies[] veggies;
     protected Cheese cheese;
     protected Pepperoni pepperoni;
     protected Clams clam;
