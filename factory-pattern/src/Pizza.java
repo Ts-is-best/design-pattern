@@ -1,4 +1,4 @@
-class Pizza {
+public class Pizza {
     public void prepare() {
     }
 
@@ -12,11 +12,3 @@ class Pizza {
     }
 }
 
-class CheesePizza extends Pizza {
-}
-
-class GreekPizza extends Pizza {
-}
-
-class PepperoniPizza extends Pizza {
-}
