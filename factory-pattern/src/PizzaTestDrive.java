@@ -1,7 +1,7 @@
 import Pizza.Pizza;
 import PizzaStore.PizzaStore;
-import PizzaStore.NYStylePizzaStore;
-import PizzaStore.ChicagoStylePizzaStore;
+import NyStyle.NYStylePizzaStore;
+import ChicagoStyle.ChicagoStylePizzaStore;
 
 public class PizzaTestDrive {
     public static void main(String[] args) {

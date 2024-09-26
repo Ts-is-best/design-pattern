@@ -1,6 +1,7 @@
-package PizzaStore;
+package NyStyle;
 
 import Pizza.Pizza;
+import PizzaStore.PizzaStore;
 
 public class NYStylePizzaStore extends PizzaStore {
     public Pizza createPizza(String item) {
