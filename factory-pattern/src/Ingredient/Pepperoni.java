@@ -1,4 +1,4 @@
 package Ingredient;
 
-public class Pepperoni {
+public abstract class Pepperoni {
 }

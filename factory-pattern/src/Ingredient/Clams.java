@@ -1,4 +1,4 @@
 package Ingredient;
 
-public class Clams {
+public abstract class Clams {
 }

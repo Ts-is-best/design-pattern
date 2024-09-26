@@ -1,4 +1,4 @@
 package Ingredient;
 
-public class Veggies {
+public abstract class Veggies {
 }
