@@ -1,35 +1,33 @@
 package NyStyle;
 
+import Ingredient.NyPizzaIngredientFactory;
+import Pizza.CheesePizza;
+import Pizza.GreekPizza;
+import Pizza.PepperoniPizza;
 import Pizza.Pizza;
+import PizzaFactory.PizzaIngredientFactory;
 import PizzaStore.PizzaStore;
 
 public class NYStylePizzaStore extends PizzaStore {
     public Pizza createPizza(String item) {
-        return switch (item) {
-            case "cheese" -> new NYStyleCheesePizza();
-            case "veggie" -> new NyStyleVeggiePizza();
-            case "clam" -> new NyStyleClamPizza();
-            case "pepperoni" -> new NyStylePepperoniPizza();
-            default -> null;
-        };
+        PizzaIngredientFactory ingredientFactory = new NyPizzaIngredientFactory();
+
+        switch (item) {
+            case "cheese":
+                Pizza cheesePizza = new CheesePizza(ingredientFactory);
+                cheesePizza.setName("NY Style Sauce and Cheese Pizza");
+                return cheesePizza;
+            case "greek":
+                Pizza greekPizza = new GreekPizza(ingredientFactory);
+                greekPizza.setName("NY Style Greek Pizza");
+                return greekPizza;
+            case "pepperoni":
+                Pizza pepperoniPizza = new PepperoniPizza(ingredientFactory);
+                pepperoniPizza.setName("NY Style Pepperoni Pizza");
+                return pepperoniPizza;
+            default:
+                return null;
+        }
     }
 }
 
-class NYStyleCheesePizza extends Pizza {
-    public NYStyleCheesePizza() {
-        name = "NY Style Sauce and Cheese Pizza";
-        dough = "Thin Crust Dough";
-        sauce = "Marinara Sauce";
-
-        toppings.add("Grated Reggiano Cheese");
-    }
-}
-
-class NyStyleVeggiePizza extends Pizza {
-}
-
-class NyStyleClamPizza extends Pizza {
-}
-
-class NyStylePepperoniPizza extends Pizza {
-}
