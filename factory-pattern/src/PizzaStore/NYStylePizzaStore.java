@@ -2,7 +2,7 @@ package PizzaStore;
 
 import Pizza.Pizza;
 
-public class NYPPizzaStore extends PizzaStore {
+public class NYStylePizzaStore extends PizzaStore {
     public Pizza createPizza(String item) {
         return switch (item) {
             case "cheese" -> new NYStyleCheesePizza();
