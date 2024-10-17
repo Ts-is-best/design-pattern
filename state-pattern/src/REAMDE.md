@@ -64,6 +64,20 @@ classDiagram
 
 ## 검볼 머신 구현하기
 
+### 검볼 머신 상태 다이어그램
+
+```mermaid
+stateDiagram-v2
+    [*] --> NoQuarterState: 초기 상태
+    NoQuarterState --> HasQuarterState: insertQuarter()
+    HasQuarterState --> NoQuarterState: ejectQuarter()
+    HasQuarterState --> SoldState: turnCrank()
+    SoldState --> NoQuarterState: dispense() & count > 0
+    SoldState --> SoldOutState: dispense() & count == 0
+    SoldOutState --> NoQuarterState: refill()
+    SoldOutState --> [*]: 모든 검볼 소진 시 종료 
+```
+
 ### 검볼 머신 클래스 다이어그램 (AS-IS)
 
 ```mermaid
